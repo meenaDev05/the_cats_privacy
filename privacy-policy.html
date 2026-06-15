@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – The Cats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #1a1008;
+      --surface:   #261708;
+      --card:      #2e1e0a;
+      --border:    #4a2f10;
+      --orange:    #e8862a;
+      --orange-dim:#b85f10;
+      --green:     #5cba6e;
+      --cream:     #f5e6c8;
+      --muted:     #a08060;
+      --radius:    14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--surface);
+      border-bottom: 2px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '🐱';
+      position: absolute;
+      font-size: 140px;
+      opacity: 0.05;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .game-title {
+      font-family: 'Pixelify Sans', monospace;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      color: var(--orange);
+      letter-spacing: 2px;
+      text-shadow: 0 0 24px rgba(232,134,42,0.4);
+      margin-bottom: 6px;
+    }
+
+    .page-subtitle {
+      font-family: 'Pixelify Sans', monospace;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      color: var(--muted);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .last-updated {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Intro box ── */
+    .intro-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      color: var(--cream);
+      font-size: 0.97rem;
+    }
+
+    .intro-box strong { color: var(--green); }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: 'Pixelify Sans', monospace;
+      font-size: 1.15rem;
+      color: var(--orange);
+      letter-spacing: 0.5px;
+    }
+
+    .section-body {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      font-size: 0.95rem;
+      color: var(--cream);
+    }
+
+    .section-body p { margin-bottom: 10px; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .section-body ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section-body ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+    }
+
+    .section-body ul li:last-child { border-bottom: none; }
+
+    .section-body ul li::before {
+      content: '▸';
+      color: var(--orange-dim);
+      position: absolute;
+      left: 0;
+    }
+
+    .highlight { color: var(--orange); font-weight: 700; }
+    .good      { color: var(--green);  font-weight: 600; }
+    .muted-text { color: var(--muted); font-size: 0.88rem; }
+
+    a {
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid var(--orange-dim);
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--cream); }
+
+    /* ── Tag chips ── */
+    .chip {
+      display: inline-block;
+      background: rgba(232,134,42,0.12);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-size: 0.82rem;
+      color: var(--orange);
+      margin: 3px 3px 3px 0;
+      font-family: 'Pixelify Sans', monospace;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-card .paw { font-size: 2rem; display: block; margin-bottom: 8px; }
+
+    .contact-card h3 {
+      font-family: 'Pixelify Sans', monospace;
+      color: var(--orange);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p { font-size: 0.93rem; color: var(--muted); margin-bottom: 12px; }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-family: 'Pixelify Sans', monospace;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .section-body { padding: 16px; }
+      .hero { padding: 36px 16px 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="game-title">🐾 THE CATS</div>
+    <div class="page-subtitle">Privacy Policy</div>
+    <span class="last-updated">Last updated: June 15, 2026</span>
+  </header>
+
+  <div class="container">
+
+    <!-- Intro -->
+    <div class="intro-box">
+      <strong>Plain-English Summary:</strong> The Cats is a free game. We don't ask for your name, email, or account. We don't sell your data. Ads are shown by Google AdMob, which may use your device info to show relevant ads. That's the gist — full details below.
+    </div>
+
+    <!-- 1. Who we are -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🐱</span>
+        <span class="section-title">1. Who We Are</span>
+      </div>
+      <div class="section-body">
+        <p><span class="highlight">The Cats</span> is an Android mobile game developed and published by an independent solo developer. The game is a free collection of three cat-themed mini-games: Match &amp; Flip, Cat Fish, and Trap the Cat.</p>
+        <p>This Privacy Policy explains what data is collected when you play, how it is used, and your rights regarding that data.</p>
+        <p class="muted-text">Developer contact is listed at the bottom of this page.</p>
+      </div>
+    </div>
+
+    <!-- 2. What data we collect -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📦</span>
+        <span class="section-title">2. Data Collected</span>
+      </div>
+      <div class="section-body">
+        <p><span class="good">We personally collect none of your data.</span> The Cats does not require you to create an account, log in, or provide any personal information to play.</p>
+        <p>The only data stored on your device is:</p>
+        <ul>
+          <li>Your best scores for each mini-game (stored locally on your device only, using shared preferences — never sent to us)</li>
+          <li>Sound and settings preferences (stored locally on your device)</li>
+        </ul>
+        <p style="margin-top:12px;">However, the game uses <span class="highlight">Google AdMob</span> to display ads. AdMob may automatically collect certain information from your device, described in Section 3.</p>
+      </div>
+    </div>
+
+    <!-- 3. Advertising (AdMob) -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📺</span>
+        <span class="section-title">3. Advertising &amp; Google AdMob</span>
+      </div>
+      <div class="section-body">
+        <p>The Cats uses <a href="https://admob.google.com" target="_blank" rel="noopener">Google AdMob</a> to serve two types of ads:</p>
+        <p>
+          <span class="chip">Rewarded Ads</span>
+          <span class="chip">Interstitial Ads</span>
+        </p>
+        <p style="margin-top: 12px;">To serve and optimize ads, AdMob may collect and process:</p>
+        <ul>
+          <li>Advertising ID (Google Advertising ID / GAID) — a resettable device identifier</li>
+          <li>IP address (used to determine approximate location for regional ad targeting)</li>
+          <li>Device information (model, OS version, screen size)</li>
+          <li>App usage and interaction data (ad impressions, clicks, view duration)</li>
+          <li>Coarse location data derived from IP address</li>
+        </ul>
+        <p style="margin-top:12px;">This data is collected and processed by Google under their own privacy policy. We do not receive or store this data ourselves.</p>
+        <p>You can review Google's data practices here:<br/>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+        </p>
+        <p style="margin-top:12px;">You can opt out of personalized ads or reset your Advertising ID at any time in your Android device settings:<br/>
+          <span class="muted-text">Settings → Google → Ads → Delete advertising ID (Android 12+) or opt out of personalized ads</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 4. Children -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🛡️</span>
+        <span class="section-title">4. Children's Privacy</span>
+      </div>
+      <div class="section-body">
+        <p>The Cats is not directed at children under the age of <span class="highlight">13</span> (or 16 in applicable regions under GDPR). We do not knowingly collect personal information from children.</p>
+        <p>The game uses standard AdMob ad formats. Parents or guardians who believe their child has used the app and have concerns are welcome to contact us using the details below.</p>
+      </div>
+    </div>
+
+    <!-- 5. Third-party services -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🔗</span>
+        <span class="section-title">5. Third-Party Services</span>
+      </div>
+      <div class="section-body">
+        <p>The Cats integrates only the following third-party service:</p>
+        <ul>
+          <li><strong>Google AdMob</strong> — Mobile advertising platform. Their privacy policy applies to all data they collect. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">View Google Privacy Policy →</a></li>
+        </ul>
+        <p style="margin-top: 12px;">No other analytics services, social SDKs, crash reporters, or third-party libraries that collect personal data are used in The Cats.</p>
+      </div>
+    </div>
+
+    <!-- 6. Data sharing -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🤝</span>
+        <span class="section-title">6. Data Sharing &amp; Sale</span>
+      </div>
+      <div class="section-body">
+        <p><span class="good">We do not sell your data.</span> We do not share any personal information with third parties for commercial purposes.</p>
+        <p>Data processed by AdMob is governed entirely by Google's own terms and is not something we control, sell, or profit from directly beyond receiving ad revenue for impressions shown in the app.</p>
+      </div>
+    </div>
+
+    <!-- 7. Data retention -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🗑️</span>
+        <span class="section-title">7. Data Retention &amp; Deletion</span>
+      </div>
+      <div class="section-body">
+        <p>All data stored by the game (scores, settings) lives exclusively on your device. You can delete it at any time by uninstalling the app or clearing the app's data in your Android settings.</p>
+        <p>For data collected by AdMob, please refer to Google's data retention policies and use Android's built-in Advertising ID controls to reset or delete your ad identifier.</p>
+      </div>
+    </div>
+
+    <!-- 8. Your rights -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">⚖️</span>
+        <span class="section-title">8. Your Rights</span>
+      </div>
+      <div class="section-body">
+        <p>Depending on your location, you may have rights regarding your personal data, including:</p>
+        <ul>
+          <li>The right to access what data has been collected about you</li>
+          <li>The right to request deletion of your data</li>
+          <li>The right to opt out of personalized advertising</li>
+          <li>The right to lodge a complaint with a data protection authority (EU/EEA users)</li>
+        </ul>
+        <p style="margin-top:12px;">Since The Cats stores no personal data on our end, most requests can be addressed by uninstalling the app and using Android's Advertising ID controls. For AdMob-specific data, contact Google directly via their privacy tools at <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com</a>.</p>
+      </div>
+    </div>
+
+    <!-- 9. Security -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🔒</span>
+        <span class="section-title">9. Security</span>
+      </div>
+      <div class="section-body">
+        <p>Since we do not collect or transmit personal data through our own servers, there is minimal security risk from our side. All score and settings data is stored locally on your device and is subject to your device's own security protections.</p>
+      </div>
+    </div>
+
+    <!-- 10. Changes -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📝</span>
+        <span class="section-title">10. Changes to This Policy</span>
+      </div>
+      <div class="section-body">
+        <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the game after changes are posted constitutes acceptance of the updated policy.</p>
+        <p>For significant changes, we will make reasonable efforts to notify users (e.g., via an in-app notice).</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <span class="paw">🐾</span>
+      <h3>Contact Us</h3>
+      <p>Questions about this policy? We're just one indie dev — reach out any time.</p>
+      <a href="mailto:timelynews01@gmail.com">your@email.com</a>
+      <p style="margin-top: 12px;" class="muted-text">The Cats · Independent Developer · India</p>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    © 2026 The Cats · All rights reserved · Made with 🧡 by one cat-obsessed dev
+  </footer>
+
+</body>
+</html>
